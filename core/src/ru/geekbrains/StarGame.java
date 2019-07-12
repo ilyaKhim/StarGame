@@ -10,23 +10,24 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 public class StarGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
-	TextureRegion region;
+	/*private static final int VIRTUAL_WIDTH = 480;
+	private static final int VIRTUAL_HEIGHT = 320;*/
+
+
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
-		region = new TextureRegion(img, 50, 50 , 200, 150);
+		img = new Texture("space.png");
 	}
 
 	@Override
 	public void render () {
-		Gdx.gl.glClearColor(0.26f, 0.5f, 0.8f, 1);
+		Gdx.gl.glClearColor(1, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
 		batch.draw(img, 0, 0);
-		batch.setColor(0.1f, 0.2f,0.3f, 0.5f);
-		batch.draw(region, 200, 200, 100,100);
+//		batch.setColor(0.1f, 0.2f,0.3f, 0.5f);
 		batch.end();
 	}
 	
